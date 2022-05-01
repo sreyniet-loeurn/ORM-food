@@ -70,7 +70,7 @@ if(isset($_SESSION['id']))
 	
 </nav>
 
-<div class="middle" style=" position:fixed; padding:40px; border:1px solid #ED2553; left:30%; top:30%; width:400px;">
+<div class="middle" style=" position:fixed; padding:40px; border:1px solid #ED2553; left:30%; top:20%; width:400px;">
        <ul class="nav nav-tabs nabbar_inverse" id="myTab" style="background:#ED2553;border-radius:10px 10px 10px 10px;" role="tablist">
           <li class="nav-item">
              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#login" role="tab" aria-controls="home" aria-selected="true">Hotel Login</a>
@@ -81,7 +81,6 @@ if(isset($_SESSION['id']))
        </ul>
 	   <br><br>
 	   <div class="tab-content" id="myTabContent">
-	   <!--login Section-- starts-->
             <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="home-tab">
 			    <div class="footer" style="color:red;"><?php if(isset($admin_login_error)){ echo $admin_login_error;}?></div>
 			  <form action="" method="post" enctype="multipart/form-data">
@@ -94,7 +93,7 @@ if(isset($_SESSION['id']))
                              <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required/>
                         </div>
                         
-                          <button type="submit" name="login" class="btn btn-primary">Submit</button>
+                          <button type="submit" name="login" class="btn btn-primary">Login</button>
                           <a href="vendor-new.php"><button type="button" name="new" class="btn btn-warning">Sign Up for New Account</button></a>
                  </form>
 			</div>

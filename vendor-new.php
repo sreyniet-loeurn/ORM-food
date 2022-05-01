@@ -39,6 +39,7 @@ extract($_REQUEST);
   
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en" >
 
@@ -96,7 +97,7 @@ extract($_REQUEST);
              <a class="nav-link active" style="color:#BDDEFD;" id="register-tab" data-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="true">Restaurant Register</a>
           </li>
 		  <li class="nav-item">
-             <a class="nav-link " id="login-tab" style="color:#BDDEFD;" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">Restaurant Login</a>
+             <a class="nav-link " id="login-tab" style="color:#BDDEFD;" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true"></a>
           </li>
        </ul>
 	   <br><br>
@@ -133,8 +134,12 @@ extract($_REQUEST);
 	                 <div class="form-group">
                           <input type="file"  name="logo" required>Upload Logo 
                      </div>
-                     <button type="submit" id="register" name="register" class="btn btn-outline-primary">Register</button>
-                     
+                     <div class = "row">
+                     <button type="submit" id="register" name="register" class="btn btn-outline-primary ml-3">Register</button>
+                     <div class="tab-pane fade show ml-5 " id="login" role="tabpanel" aria-labelledby="home-tab">
+			   <a href="vendor_login.php"><button type="button"   margin-right:100%; " class="btn btn-outline-primary" name="login" value="Log In">Log In</button></a>
+			</div>
+			</div>
                 </form>
 				<br>
 			</div>
@@ -145,9 +150,7 @@ extract($_REQUEST);
 	   </div>
 	</div>
 	<br>
-	 <?php
-			include("footer.php");
-			?>
+	
 	 
 	   
 </body>

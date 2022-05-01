@@ -198,7 +198,7 @@ if(isset($logout))
              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#viewitem" role="tab" aria-controls="home" aria-selected="true">Update Products</a>
           </li>
          
-              <a class="nav-link" style="color:white;" id="profile-tab"  aria-selected="false">Product Details</a>
+              <a class="nav-link" style="color:white;" id="profile-tab"  aria-selected="false"></a>
          
        </ul>
 	   <br><br>
@@ -247,12 +247,7 @@ if(isset($logout))
 									
                                </form>      	 
 	        </div>
-<!--tab 1 ends-->	   
 			
-			
-			
-			 
-      
 	  </div>
 	</div>  
 	

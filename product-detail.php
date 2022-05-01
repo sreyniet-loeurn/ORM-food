@@ -53,7 +53,21 @@ if (isset($message)) {
 		echo "failed";
 	}
 }
-
+if (isset($_SESSION['id'])) {
+	if (!empty($_GET['food_id'])) {
+		$food_id = $_GET['food_id'];
+		$query = mysqli_query($con, "select * from tbfood   where food_id='$food_id'");
+		if (mysqli_num_rows($query)) {
+			$row = mysqli_fetch_array($query);
+			$rfoodname = $row['foodname'];
+			$rcost = $row['cost'];
+			$rcuisines = $row['cuisines'];
+			$rpaymentmode = $row['paymentmode'];
+			$rfldimageold = $row['fldimage'];
+			$em = $_SESSION['id'];
+		}
+	}
+}
 ?>
 <html>
 
@@ -130,7 +144,7 @@ if (isset($message)) {
 <body>
 	<div id="result" style="position:fixed;top:300; right:500;z-index: 3000;width:350px;background:white;"></div>
 	<div id="resulthotel" style=" margin:0px auto; position:fixed; top:150px;right:750px; background:white;  z-index: 3000;"></div>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
 		<a class="navbar-brand" href="index.php"><span style="color:green;font-family: 'Permanent Marker', cursive;">Food Hunt</span></a>
 		<?php
 		if (!empty($cust_id)) {
@@ -144,7 +158,7 @@ if (isset($message)) {
 		</button>
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 
-			<ul class="navbar-nav ml-auto" style="font-size:15px;">
+			<ul class="navbar-nav ml-auto">
 
 				<li class="nav-item">
 					<!--hotel search-->
@@ -158,29 +172,18 @@ if (isset($message)) {
 					</a>
 				</li>
 				<li class="nav-item active">
-					<strong>
-
-						<a class="nav-link" href="index.php">Home
-					</strong>
+					<a class="nav-link" href="index.php">Home
 
 					</a>
 				</li>
-				<li class="nav-item"><strong>
+				<li class="nav-item">
 					<a class="nav-link" href="aboutus.php">About</a>
-
-				</strong>
 				</li>
 				<li class="nav-item">
-					<strong>
-
-						<a class="nav-link" href="services.php">Services</a>
-					</strong>
+					<a class="nav-link" href="services.php">Services</a>
 				</li>
 				<li class="nav-item">
-					<strong>
-
-						<a class="nav-link" href="contact.php">Contact</a>
-					</strong>
+					<a class="nav-link" href="contact.php">Contact</a>
 				</li>
 				<li class="nav-item">
 					<form method="post">
@@ -211,97 +214,29 @@ if (isset($message)) {
 
 	</nav>
 	<!--menu ends-->
-	<div id="demo" class="carousel slide" data-ride="carousel">
-		<ul class="carousel-indicators">
-			<li data-target="#demo" data-slide-to="0" class="active"></li>
-			<li data-target="#demo" data-slide-to="1"></li>
-			<li data-target="#demo" data-slide-to="2"></li>
-		</ul>
-		<div class="carousel-inner">
-			<div class="carousel-item active">
-				<img src="img/coffee_foam_beverage_cup_saucer_creative_continents_84944_1920x1080 (1).jpg" alt="Los Angeles" class="d-block w-100">
-				<div class="carousel-caption">
-					<h3>Los Angeles</h3>
-					<p>We had such a great time in LA!</p>
-				</div>
-			</div>
-			<div class="carousel-item">
-				<img src="img/coffee_cup_saucer_grains_foam_73571_1920x1080.jpg" alt="Chicago" class="d-block w-100">
-				<div class="carousel-caption">
-					<h3>Chicago</h3>
-					<p>Thank you, Chicago!</p>
-				</div>
-			</div>
-			<div class="carousel-item">
-				<img src="img/coffee_foam_beverage_cup_saucer_creative_continents_84944_1920x1080 (1).jpg" alt="New York" class="d-block w-100">
-				<div class="carousel-caption">
-					<h3>New York</h3>
-					<p>We love the Big Apple!</p>
-				</div>
-			</div>
-		</div>
-		<a class="carousel-control-prev" href="#demo" data-slide="prev">
-			<span class="carousel-control-prev-icon"></span>
-		</a>
-		<a class="carousel-control-next" href="#demo" data-slide="next">
-			<span class="carousel-control-next-icon"></span>
-		</a>
-	</div>
-
-
-	<br><br>
-	<div class="container-fluid">
+	<div class="container" style="margin-top: 140px;">
 
 		<div class="row">
-			<?php
-			$query = mysqli_query($con, "select * from tblvendor inner join
-	  			tbfood on tblvendor.fldvendor_id=tbfood.fldvendor_id");
-			while ($res = mysqli_fetch_assoc($query)) {
-				$hotel_logo = "image/restaurant/" . $res['fld_email'] . "/" . $res['fld_logo'];
-				$food_pic = "image/restaurant/" . $res['fld_email'] . "/foodimages/" . $res['fldimage'];
-			?>
-				<div class="col-4">
-					<div class="card">
-						<div class="card-header bg-warning">
-							<div class="row">
-								<div class="col-sm-2"><img src="<?php echo $food_pic; ?>" class="rounded-circle" height="30px" width="30px" alt="Cinque Terre"></div>
-								<div class="col-sm-4">
-									<a href="search.php?vendor_id=<?php echo $res['fldvendor_id']; ?>">
-										<span style="font-size:10px;color:black;" class="textstyle">
-											<?php echo $res['foodname']; ?>
-										</span>
-									</a>
-								</div>
-								<div class="col-sm-3">
-									<i style="font-size:10px;" class="fas fa-rupee-sign"></i>&nbsp;<span style="color:green; font-size:10px;"><?php echo $res['cost']; ?></span>
-								</div>
-								<form method="post">
-									<div style="font-size:10px;">
-										<button type="submit" class="btn btn-light shopping-icon" name="addtocart" value="<?php echo $res['food_id']; ?>">
-											<span style="color:green;"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-										</button>
-									</div>
-									<form>
-							</div>
-						</div>
-						<div class="card-body">
-							<img src="<?php echo $food_pic; ?>" class="rounded" height="150px" width="100%" alt="Cinque Terre">
-						</div>
-						<div class="card-footer text-white" style="background-color: darkcyan;">
-							<div class="row">
-								<p class="textstyle"><?php echo $res['cuisines']; ?></p>
-								<a style="margin-left:50%" href="product-detail.php?food_id=<?php echo $res['food_id']; ?>"><button type="button" class="btn btn-danger btn-sm">Detail </button></a>
-							</div>
+			<div class="col-2"></div>
+			<div class="col-4">
 
-						</div>
-					</div>
-				</div>
+				<h4>Name Food: <strong><?php echo $row['foodname']; ?></strong> </h4>
+				<br>
+				<h4>Cost of Food: <strong><?php echo $row['cost']; ?></strong> </h4>
+				<br>
+				<h4>Cuisines: <strong><?php echo $row['cuisines']; ?></strong> </h4>
+
+			</div>
+			<div class="col-4">
 				<?php
-			}
-			?>
+				echo "<img width='90%'; src=image/restaurant/restuarant1@gmail.com/foodimages/$rfldimageold class='' alt='$row[fldimage]'>";
+				?>
+			</div>
+			<div class="col-2"></div>
 
-</div">
+		</div>
 	</div>
+	<br><br>
 	<br>
 	<?php
 	include("footer.php");

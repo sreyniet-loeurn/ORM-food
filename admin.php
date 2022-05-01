@@ -99,15 +99,11 @@ extract($_REQUEST);
                   <div class="footer" style="color:green;"><?php if(isset($_SESSION['pas_update_success'])) { echo $_SESSION['pas_update_success']; }?></div>
 			 </form>
 			</div>
-			<!--login Section-- ends-->
 			
 			
             
       </div>
 	  </div>
-	   <br><br><br><br><br><br><br>
-	    <?php
-			include("footer.php");
-			?>
+	   
 </body>
 </html>

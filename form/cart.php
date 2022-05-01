@@ -276,7 +276,8 @@ $re = mysqli_num_rows($query);
 
 
 			<!--tab 2 starts-->
-			<div class="tab-pane fade" id="manageaccount" aria-labelledby="manageaccount-tab">
+			<div class="tab-pane fade" id="manageaccount" aria-labelledby="
+			-tab">
 				<div class="col-10">
 					<div class="card">
 						<div class="card-header">

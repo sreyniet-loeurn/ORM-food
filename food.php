@@ -236,7 +236,7 @@ if(isset($upd_account))
 						 while($row=mysqli_fetch_array($query))
 						 {
 							 
-							 ?>
+					?>
 			     <tr>
 				 				 
 				<td><img src="<?php echo 'image/restaurant/'.$id.'/foodimages/'.$row['fldimage'];?>" height="100px" width="150px"></td>
