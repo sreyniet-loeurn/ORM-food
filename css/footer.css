@@ -30,15 +30,7 @@ ul {
 a {
   text-decoration: none
 }
-/* .generic-anchor {
-	color: $primary-light-blue;
-	&:visited {
-		color: $primary-light-blue
-	}
-	&:hover {
-		color: $primary-line-color
-	}
-} */
+
 .flex-rw {
   display: flex;
   flex-flow: row wrap;
@@ -218,3 +210,4 @@ footer {
     font-size: 1.3em
   }
 }
+

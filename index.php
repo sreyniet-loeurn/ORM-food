@@ -247,18 +247,14 @@ if (isset($message)) {
 				$food_pic = "image/restaurant/" . $res['fld_email'] . "/foodimages/" . $res['fldimage'];
 			?>
 				<div class="col-4">
-					
 					<div class="card">
-						
 						<div class="card-header bg-warning">
 							<div class="row">
 								<div class="col-sm-2"><img src="<?php echo $food_pic; ?>" class="rounded-circle" height="30px" width="30px" alt="Cinque Terre"></div>
 								<div class="col-sm-4">
-									<a href="search.php?vendor_id=<?php echo $res['fldvendor_id']; ?>">
 										<span style="font-size:10px;color:black;" class="textstyle">
 											<?php echo $res['foodname']; ?>
 										</span>
-									</a>
 								</div>
 								<div class="col-sm-3">
 									<i style="font-size:10px;" class="fas fa-rupee-sign"></i>&nbsp;<span style="color:green; font-size:10px;"><?php echo $res['cost']; ?></span>

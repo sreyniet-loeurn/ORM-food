@@ -32,26 +32,26 @@
 		<li id='order-tracking'><a href='/shop/order-status' itemprop="significantLink" class="generic-anchor textstyle">ORDER STATUS</a></li>
 	</ul>
 	<section class="footer-social-section flex-rw">
-		<span class="footer-social-overlap textstyle footer-social-connect">
+		<span class="footer-social-overlap textstyle text-white">
 			CONNECT <span class="footer-social-small">with</span> US
 		</span>
 		<span class="footer-social-overlap footer-social-icons-wrapper">
-			<a href="https://www.pinterest.com/paviliongift/" class="generic-anchor" target="_blank" title="Pinterest" itemprop="significantLink"><i class="fab fa-pinterest" aria-hidden="true"></i></a>
-			<a href="https://www.facebook.com/paviliongift" class="generic-anchor" target="_blank" title="Facebook" itemprop="significantLink"><i class="fab fa-facebook"></i></a>
-			<a href="https://twitter.com/PavilionGiftCo" class="generic-anchor" target="_blank" title="Twitter" itemprop="significantLink"><i class="fab fa-twitter"></i></a>
-			<a href="http://instagram.com/paviliongiftcompany" class="generic-anchor" target="_blank" title="Instagram" itemprop="significantLink"><i class="fab fa-instagram"></i></a>
-			<a href="https://www.youtube.com/channel/UCYgUODvd0qXbu_LkUWpTVEg" class="generic-anchor" target="_blank" title="Youtube" itemprop="significantLink"><i class="fab fa-youtube"></i></a>
-			<a href="https://plus.google.com/+Paviliongift/posts" class="generic-anchor" target="_blank" title="Google Plus" itemprop="significantLink"><i class="fab fa-google-plus"></i></a>
+			<a href="https://www.pinterest.com/paviliongift/" class="generic-anchor" target="_blank" title="Pinterest" itemprop="significantLink"><i style="font-size: 20px;" class="fab fa-pinterest" aria-hidden="true"></i></a>
+			<a href="https://www.facebook.com/paviliongift" class="generic-anchor" target="_blank" title="Facebook" itemprop="significantLink"><i style="font-size: 20px;" class="fab fa-facebook"></i></a>
+			<a href="https://twitter.com/PavilionGiftCo" class="generic-anchor" target="_blank" title="Twitter" itemprop="significantLink"><i style="font-size: 20px;" class="fab fa-twitter"></i></a>
+			<a href="http://instagram.com/paviliongiftcompany" class="generic-anchor" target="_blank" title="Instagram" itemprop="significantLink"><i style="font-size: 20px;" class="fab fa-instagram"></i></a>
+			<a href="https://www.youtube.com/channel/UCYgUODvd0qXbu_LkUWpTVEg" class="generic-anchor" target="_blank" title="Youtube" itemprop="significantLink"><i style="font-size: 20px;" class="fab fa-youtube"></i></a>
+			<a href="https://plus.google.com/+Paviliongift/posts" class="generic-anchor" target="_blank" title="Google Plus" itemprop="significantLink"><i style="font-size: 20px;" class="fab fa-google-plus"></i></a>
 		</span>
 	</section>
 	<section class="footer-bottom-section flex-rw">
 		<div class="footer-bottom-wrapper textstyle">
-			<i class="fa fa-copyright" role="copyright">
+			<i style="font-size: 15px;" class="fa fa-copyright" role="copyright">
 
-			</i> 2019 Pavilion in <address class="footer-address" role="company address">Bergen, NY</address><span class="footer-bottom-rights"> - All Rights Reserved - </span>
+			</i style="font-size: 15px;"> 2019 Pavilion in <address class="footer-address" role="company address">Bergen, NY</address><span class="footer-bottom-rights"> - All Rights Reserved - </span>
 		</div>
-		<div class="footer-bottom-wrapper">
-			<a href="/terms-of-use.html" class="generic-anchor textstyle" rel="nofollow">Terms</a> | <a href="/privacy-policy.html" class="generic-anchor textstyle" rel="nofollow">Privacy</a>
+		<div class="footer-bottom-wrapper" style="font-size: 15px;">
+			<a  href="/terms-of-use.html" class="generic-anchor textstyle" rel="nofollow">Terms</a> | <a href="/privacy-policy.html" class="generic-anchor textstyle" rel="nofollow">Privacy</a>
 		</div>
 	</section>
 </footer>
